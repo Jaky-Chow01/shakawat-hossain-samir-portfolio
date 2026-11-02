@@ -1,0 +1,389 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Shakawat Hossain Samir</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: single soft column of pastel "sticker" sections; hero with overlapping shapes, two project cards (one with a live seven-segment display), skills as colored pills, contact tiles. */
+:root {
+  --bg: #F7F2FC;
+  --surface: #FFFFFF;
+  --ink: #2B2142;
+  --muted: #62567E;
+  --line: #E4DAF2;
+  --pink: #FF9EBB;
+  --mint: #9BE3C6;
+  --butter: #FFDD8F;
+  --sky: #9CCBFF;
+  --lilac: #C2B0FF;
+  --on-pastel: #2B2142;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1B1430; --surface: #2A2145; --ink: #F3EDFF; --muted: #B8ACD8; --line: #3E3363;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1B1430; --surface: #2A2145; --ink: #F3EDFF; --muted: #B8ACD8; --line: #3E3363;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-block: 0 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--lilac); outline-offset: 3px; border-radius: 6px; }
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
+p { margin: 0; }
+.label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+/* top bar */
+.top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding-block: 22px; }
+.mark { font-family: var(--font-display); font-weight: 800; font-size: 20px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.mark i { width: 14px; height: 14px; border-radius: 50%; background: var(--pink); box-shadow: 10px 0 0 var(--butter), 20px 0 0 var(--mint); margin-right: 20px; }
+.nav { display: flex; flex-wrap: wrap; gap: 6px; }
+.nav a { text-decoration: none; font-weight: 500; font-size: 15px; padding: 6px 14px; border-radius: 999px; }
+.nav a:hover { background: var(--surface); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 32px; align-items: center; padding-block: 40px 56px; }
+.chip { display: inline-flex; align-items: center; gap: 8px; background: var(--mint); color: var(--on-pastel); font-weight: 600; font-size: 14px; padding: 7px 14px; border-radius: 999px; }
+.chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--on-pastel); }
+.hero h1 { font-weight: 800; font-size: clamp(44px, 8vw, 92px); margin-top: 22px; }
+.hero h1 span { background: linear-gradient(transparent 62%, var(--butter) 62% 92%, transparent 92%); padding-inline: 4px; margin-inline: -4px; color: var(--ink); }
+.hero .lead { font-size: 20px; max-width: 34em; margin-top: 22px; color: var(--muted); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.btn { text-decoration: none; font-weight: 600; padding: 13px 22px; border-radius: 999px; border: 2px solid var(--ink); display: inline-block; }
+.btn.fill { background: var(--ink); color: var(--bg); }
+.btn.fill:hover { background: var(--lilac); color: var(--on-pastel); border-color: var(--lilac); }
+.btn.line:hover { background: var(--pink); color: var(--on-pastel); border-color: var(--pink); }
+
+.shapes { position: relative; aspect-ratio: 1; max-width: 100%; width: 100%; }
+.shapes b { position: absolute; display: block; }
+.s1 { inset: 4% 22% 30% 0; background: var(--lilac); border-radius: 46% 54% 40% 60% / 55% 45% 55% 45%; }
+.s2 { inset: 34% 0 0 30%; background: var(--pink); border-radius: 60% 40% 55% 45% / 45% 60% 40% 55%; }
+.s3 { width: 34%; aspect-ratio: 1; right: 6%; top: 2%; background: var(--butter); border-radius: 50%; }
+.s4 { width: 26%; aspect-ratio: 1; left: 6%; bottom: 4%; background: var(--mint); border-radius: 32%; transform: rotate(12deg); }
+.s5 { width: 18%; aspect-ratio: 1; left: 46%; top: 44%; background: var(--sky); border-radius: 50%; }
+.shapes .mono { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: clamp(40px, 7vw, 76px); color: var(--on-pastel); letter-spacing: -0.04em; }
+
+/* sections */
+section { padding-block: 44px; }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 18px; margin-bottom: 28px; }
+.head h2 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; }
+
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 28px; padding: 28px; min-width: 0; }
+.panel p + p { margin-top: 14px; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.facts li { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 12px; align-items: baseline; }
+.facts .label { padding-top: 3px; }
+
+/* projects */
+.project { background: var(--surface); border: 1px solid var(--line); border-radius: 32px; overflow: hidden; margin-bottom: 28px; }
+.project .banner { padding: 28px; display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; justify-content: space-between; color: var(--on-pastel); }
+.banner.b-sky { background: var(--sky); }
+.banner.b-pink { background: var(--pink); }
+.project .banner h3 { font-size: clamp(26px, 4vw, 40px); font-weight: 800; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 999px; background: rgba(255,255,255,0.65); color: var(--on-pastel); }
+.pbody { padding: 28px; display: grid; gap: 24px; }
+.pbody > p { max-width: 46em; color: var(--muted); }
+.pbody > p strong { color: var(--ink); font-weight: 600; }
+
+/* seven segment display */
+.device { background: #241B3D; border-radius: 22px; padding: 22px 18px 16px; }
+.device .cap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #A99CCB; margin-bottom: 14px; }
+.digits { display: flex; flex-wrap: wrap; gap: 10px 8px; justify-content: center; }
+.digit { width: 44px; text-align: center; }
+.digit svg { display: block; width: 100%; height: auto; }
+.digit small { display: block; font-family: var(--font-mono); font-size: 11px; color: #A99CCB; margin-top: 4px; }
+.seg { fill: #3A2F5C; transition: fill 0.2s; }
+.seg.on { fill: var(--c); }
+
+/* feature grid */
+.features { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.features li { background: var(--bg); border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px; min-width: 0; }
+.features strong { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+.features strong::before { content: ""; flex: none; width: 12px; height: 12px; border-radius: 50%; background: var(--dot, var(--lilac)); }
+.features span { display: block; font-size: 14.5px; color: var(--muted); margin-top: 4px; line-height: 1.5; }
+.features li:nth-child(5n+1) { --dot: var(--pink); }
+.features li:nth-child(5n+2) { --dot: var(--butter); }
+.features li:nth-child(5n+3) { --dot: var(--mint); }
+.features li:nth-child(5n+4) { --dot: var(--sky); }
+.features li:nth-child(5n+5) { --dot: var(--lilac); }
+
+.status { display: grid; gap: 10px; }
+.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.flow span { font-size: 14px; font-weight: 600; padding: 6px 14px; border-radius: 999px; color: var(--on-pastel); background: var(--c); }
+.flow .arrow { background: none; padding: 0; color: var(--muted); font-weight: 500; }
+
+/* skills */
+.skillgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.skill { border-radius: 28px; padding: 24px; color: var(--on-pastel); min-width: 0; }
+.skill h3 { font-size: 24px; font-weight: 800; margin-bottom: 14px; }
+.skill ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.skill li { background: rgba(255,255,255,0.7); font-weight: 600; font-size: 15px; padding: 6px 14px; border-radius: 999px; }
+.skill p { font-size: 14.5px; margin-top: 14px; }
+.sk-a { background: var(--lilac); } .sk-b { background: var(--butter); } .sk-c { background: var(--mint); }
+
+/* contact */
+.contact { background: var(--ink); color: var(--bg); border-radius: 36px; padding: clamp(24px, 5vw, 48px); }
+.contact h2 { font-size: clamp(32px, 6vw, 60px); font-weight: 800; max-width: 12em; }
+.contact .sub { margin-top: 12px; opacity: 0.8; max-width: 34em; }
+.rows { display: grid; gap: 12px; margin-top: 30px; }
+.row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 14px 18px; }
+.row .label { color: inherit; opacity: 0.7; width: 100%; }
+.row .val { font-weight: 600; font-size: 18px; overflow-wrap: anywhere; min-width: 0; flex: 1 1 220px; user-select: all; }
+.row button, .row a.go { font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; border: 0; border-radius: 999px; padding: 8px 16px; background: var(--butter); color: var(--on-pastel); text-decoration: none; }
+.row button:hover, .row a.go:hover { background: var(--pink); }
+
+footer { padding-top: 32px; text-align: center; color: var(--muted); font-size: 14px; }
+
+@media (max-width: 820px) {
+  .hero { grid-template-columns: minmax(0, 1fr); padding-block: 16px 36px; }
+  .shapes { max-width: 320px; margin-inline: auto; }
+  .about { grid-template-columns: minmax(0, 1fr); }
+  .skillgrid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .panel, .pbody, .project .banner { padding: 20px; }
+  .facts li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .digit { width: 36px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .seg { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top"><i></i>Samir</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <span class="chip">CSE undergrad, BRAC University</span>
+        <h1>Shakawat Hossain <span>Samir</span></h1>
+        <p class="lead">I study computer science in Dhaka. I like building things that work, from logic circuits to full web platforms, and I make videos and reels when I want to tell the story around them.</p>
+        <div class="cta">
+          <a class="btn fill" href="#projects">See my projects</a>
+          <a class="btn line" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="shapes" aria-hidden="true">
+        <b class="s1"></b><b class="s2"></b><b class="s3"></b><b class="s4"></b><b class="s5"></b>
+        <div class="mono">SHS</div>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="head"><h2>About me</h2><span class="label">Dhaka, Bangladesh</span></div>
+      <div class="about">
+        <div class="panel">
+          <p>I'm an undergraduate student at BRAC University, majoring in Computer Science and Engineering.</p>
+          <p>My coursework projects so far cover two ends of the stack: a hardware design built from logic gates, and a web platform for legal services. I enjoy group work and I give my teammates credit for it.</p>
+          <p>Outside code, I make reels, edit video and create content. That helps me explain what I build in a way people actually watch.</p>
+        </div>
+        <div class="panel">
+          <ul class="facts">
+            <li><span class="label">University</span><span>BRAC University</span></li>
+            <li><span class="label">Major</span><span>Computer Science and Engineering</span></li>
+            <li><span class="label">Based in</span><span>Dhaka</span></li>
+            <li><span class="label">Languages</span><span>Python, JavaScript</span></li>
+            <li><span class="label">Also</span><span>Video editing, reels, content creation</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="head"><h2>Projects</h2><span class="label">Two so far</span></div>
+
+      <article class="project">
+        <div class="banner b-sky">
+          <h3>Law Firm</h3>
+          <div class="tags"><span class="tag">Web platform</span><span class="tag">Client and Lawyer roles</span><span class="tag">12 features</span></div>
+        </div>
+        <div class="pbody">
+          <p><strong>A web-based legal service platform that connects clients with qualified lawyers.</strong> Clients search for a lawyer by specialization, location, experience and fee, then hire them for a case. Ratings, reviews and a leaderboard help clients choose with confidence, which makes legal help easier to find and trust.</p>
+          <ul class="features">
+            <li><strong>User authentication</strong><span>Register and log in as a Client or a Lawyer, with a dashboard for each role.</span></li>
+            <li><strong>Lawyer search</strong><span>Filter by specialization, location, years of experience and consultation fee.</span></li>
+            <li><strong>Case requests</strong><span>Clients send a request, lawyers accept or reject it, and the case status updates.</span></li>
+            <li><strong>Ratings and reviews</strong><span>After a case closes, clients leave 1 to 5 stars and a written review. Averages update automatically.</span></li>
+            <li><strong>Leaderboard</strong><span>Top lawyers ranked by average rating and completed cases.</span></li>
+            <li><strong>Payments and billing</strong><span>Invoices after acceptance, full or installment payments, history and outstanding balance.</span></li>
+            <li><strong>Document management</strong><span>Contracts, evidence and court notices stored against the right case, shared with authorized users.</span></li>
+            <li><strong>Appointments</strong><span>Book available time slots. Lawyers accept, reject or reschedule, and overlaps are prevented.</span></li>
+            <li><strong>Admin and verification</strong><span>Admins check credentials. Only verified lawyers can offer services, and the approver and date are recorded.</span></li>
+            <li><strong>In-app messaging</strong><span>Secure chat organized by case, so every conversation stays with its case.</span></li>
+            <li><strong>Notifications</strong><span>Alerts for requests, appointments, messages, uploads, payments and verification.</span></li>
+            <li><strong>Case status</strong><span>Clients always know where their case stands.</span></li>
+          </ul>
+          <div class="status">
+            <span class="label">Case status flow</span>
+            <div class="flow" aria-label="Possible case statuses">
+              <span style="--c: var(--butter)">Pending</span>
+              <span style="--c: var(--sky)">Accepted</span>
+              <span style="--c: var(--lilac)">In Progress</span>
+              <span style="--c: var(--pink)">Waiting for Documents</span>
+              <span style="--c: var(--sky)">Scheduled for Hearing</span>
+              <span style="--c: var(--mint)">Closed</span>
+              <span class="arrow">then</span>
+              <span style="--c: var(--mint)">Won</span>
+              <span style="--c: var(--pink)">Lost</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="banner b-pink">
+          <h3>Seven-Segment Display</h3>
+          <div class="tags"><span class="tag">Digital Logic Design</span><span class="tag">Group of 4</span><span class="tag">Gate limits</span></div>
+        </div>
+        <div class="pbody">
+          <p><strong>A seven-segment display system that can show every character in the phrase JUStICELEAGUE.</strong> My three classmates and I designed it for our Digital Logic Design course. It meant working with Boolean logic, character encoding and circuit simplification, all within strict limits on how many gates we could use. Thanks to my teammates for the teamwork and effort.</p>
+          <div class="device" role="img" aria-label="Seven-segment display spelling J U S t I C E L E A G U E">
+            <div class="cap"><span>Seven-segment output</span><span>13 characters, 7 segments each</span></div>
+            <div class="digits" id="digits"></div>
+          </div>
+          <div class="tags">
+            <span class="tag" style="background: var(--lilac)">Boolean logic</span>
+            <span class="tag" style="background: var(--butter)">Character encoding</span>
+            <span class="tag" style="background: var(--mint)">Circuit simplification</span>
+            <span class="tag" style="background: var(--sky)">Gate-limited design</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="skills">
+      <div class="head"><h2>Skills</h2><span class="label">What I use</span></div>
+      <div class="skillgrid">
+        <div class="skill sk-a">
+          <h3>Code</h3>
+          <ul><li>Python</li><li>JavaScript</li></ul>
+          <p>Scripts, small tools and web projects.</p>
+        </div>
+        <div class="skill sk-b">
+          <h3>Office</h3>
+          <ul><li>Excel</li><li>PowerPoint</li></ul>
+          <p>Clean spreadsheets and clear presentations.</p>
+        </div>
+        <div class="skill sk-c">
+          <h3>Creative</h3>
+          <ul><li>Reel making</li><li>Video editing</li><li>Content creation</li></ul>
+          <p>Short-form video from idea to final cut.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <span class="label" style="color: inherit; opacity: 0.7">Contact</span>
+        <h2 style="margin-top: 10px">Let's build something together.</h2>
+        <p class="sub">Open to collaborations, student projects and internships. Send a message on any of these.</p>
+        <div class="rows">
+          <div class="row">
+            <span class="label">Email</span>
+            <span class="val" id="e1">hossainsamirr@gmail.com</span>
+            <button type="button" data-copy="e1">Copy</button>
+          </div>
+          <div class="row">
+            <span class="label">University email</span>
+            <span class="val" id="e2">shakawat.hossain.samir@g.bracu.ac.bd</span>
+            <button type="button" data-copy="e2">Copy</button>
+          </div>
+          <div class="row">
+            <span class="label">Instagram</span>
+            <span class="val">@hossain_samirr</span>
+            <a class="go" href="https://www.instagram.com/hossain_samirr/" target="_blank" rel="noopener noreferrer">Open</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Shakawat Hossain Samir, CSE, BRAC University, Dhaka</footer>
+</div>
+
+<script>
+(function () {
+  // segments: a top, b upper right, c lower right, d bottom, e lower left, f upper left, g middle
+  var MAP = {
+    J: 'bcde', U: 'bcdef', S: 'afgcd', t: 'fegd', I: 'ef', C: 'afed',
+    E: 'afged', L: 'fed', A: 'abcefg', G: 'afedc'
+  };
+  var SHAPES = {
+    a: '8,4 12,0 38,0 42,4 38,8 12,8',
+    b: '44,6 48,10 48,38 44,42 40,38 40,10',
+    c: '44,50 48,54 48,82 44,86 40,82 40,54',
+    d: '8,88 12,84 38,84 42,88 38,92 12,92',
+    e: '6,50 10,54 10,82 6,86 2,82 2,54',
+    f: '6,6 10,10 10,38 6,42 2,38 2,10',
+    g: '8,46 12,42 38,42 42,46 38,50 12,50'
+  };
+  var COLORS = ['#FF9EBB', '#FFDD8F', '#9BE3C6', '#9CCBFF', '#C2B0FF'];
+  var text = 'JUStICELEAGUE';
+  var box = document.getElementById('digits');
+  if (box) {
+    var html = '';
+    for (var i = 0; i < text.length; i++) {
+      var ch = text.charAt(i);
+      var on = MAP[ch] || '';
+      var color = COLORS[i % COLORS.length];
+      html += '<div class="digit"><svg viewBox="0 0 50 92" aria-hidden="true">';
+      'abcdefg'.split('').forEach(function (s) {
+        html += '<polygon class="seg' + (on.indexOf(s) > -1 ? ' on' : '') + '" style="--c:' + color + '" points="' + SHAPES[s] + '"/>';
+      });
+      html += '</svg><small>' + ch + '</small></div>';
+    }
+    box.innerHTML = html;
+  }
+
+  document.querySelectorAll('button[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var el = document.getElementById(btn.getAttribute('data-copy'));
+      var txt = el.textContent.trim();
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+      var fallback = function () {
+        try {
+          var r = document.createRange(); r.selectNodeContents(el);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          btn.textContent = 'Selected';
+          setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+        } catch (e) {}
+      };
+      try {
+        navigator.clipboard.writeText(txt).then(done, fallback);
+      } catch (e) { fallback(); }
+    });
+  });
+})();
+</script>
+
+</body></html>
